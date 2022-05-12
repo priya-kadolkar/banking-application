@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="main">
+    <ul class="nav_links">
+      <li style="font-size: 20px">
+        <h1 style="margin: 0px; padding: 0px">Banking Application</h1>
+      </li>
+      <li style="margin-left: 600px">
+        <button routerLink="/home">Home</button>
+      </li>
+      <li>
+        <button routerLink="/login">Logout</button>
+      </li>
+    </ul>
+  </div>
+
+  <h1 style="color: rgb(221, 12, 12); font-weight: 500; margin-top: 50px">
+    {{ firstname | uppercase }} {{ lastname | uppercase }}
+  </h1>
+
+  <div *ngFor="let accountList of listOfAccountTypes" class="list">
+    <table class="table">
+      <thead>
+        <th>Account Number</th>
+        <th>Account type</th>
+      </thead>
+      <tbody>
+        <td>
+          {{ accountList.accountNumber }}
+        </td>
+        <td>
+          <button
+            class="btn btn-primary"
+            style="margin-bottom: 10px"
+            (click)="callAcccountDetails(accountList.accountType)"
+          >
+            {{ accountList.accountType | uppercase }}
+          </button>
+        </td>
+      </tbody>
+    </table>
+  </div>
+</div>

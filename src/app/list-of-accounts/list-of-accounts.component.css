@@ -1,0 +1,43 @@
+/* .container{
+    margin-left: 500px;
+    padding: 50px;
+    display: block;
+    justify-content: center;
+} */
+.nav_links{
+    display: flex;  
+    /* justify-content: space-between; */
+    background:#074c85;
+    margin: 0px;
+}
+
+.nav_links li{
+    list-style: none;
+    padding: 20px;
+    color: white;
+    /* margin-right: 0px 50px; */
+ }
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+/* .list{
+    display: flex;
+    flex-direction: row;
+} */
+/* .list-accounts{
+    display: inline-flex;
+    justify-items: flex-end;
+} */
+.form-label{
+    font-size: 20px;
+}
+th{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+
+

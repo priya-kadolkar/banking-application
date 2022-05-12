@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="main">
+      <ul class="nav_links">
+        <li style="font-size: 20px"><h1 style="margin: 0px;padding: 0px;">Banking Application</h1></li>
+        <!-- <b><li><a routerLink="/">Home</a></li></b> -->
+        <li style="margin-left: 600px;"><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/signup">SignUp</a></li>
+      </ul>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../../assets/login.webp" class="img-fluid" alt="Sample image" />
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Login</h1>
+            <h6>Please enter email and password !!</h6>
+            <hr />
+          </div>
+          <form class="mx-1 mx-md-4" [formGroup]="loginForm">
+            <div class="form-group">
+              <div class="mb-3">
+                <label class="form-label">Email Id</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="emailId"
+                />
+              </div>
+              <div
+                *ngIf="
+                  loginForm.controls['emailId'].touched &&
+                  loginForm.controls['emailId'].hasError('required')
+                "
+              >
+                <p style="color: rgb(245, 234, 234); margin-left: 20px">
+                  Email is required
+                </p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                />
+              </div>
+              <div
+                *ngIf="
+                  loginForm.controls['password'].touched &&
+                  loginForm.controls['password'].hasError('required')
+                "
+              >
+                <p style="color: rgb(245, 234, 234); margin-left: 20px">
+                  Password is required
+                </p>
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary" (click)="login()">
+              Submit
+            </button>
+          </form>
+          <!-- <p style="color: #fff; margin-left: 20px; margin-top: 10px">
+            New user? Click to<span
+              ><a
+                style="
+                  color: rgb(250, 181, 33);
+                  margin-top: 10px;
+                  margin-left: 5px;
+                "
+                routerLink="/signup"
+                >SignUp</a
+              ></span
+            >
+          </p> -->
+          <a
+            routerLink="/signup"
+            style="color: rgb(68, 201, 224); margin-top: 10px; margin-left: 20px;"
+            >New user? Click to SignUp !</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <h1 style="color: red;">Customer Alert!!</h1>
+    <ul>
+        <li>Do not respond to fraudulent communications asking your confidentials like A/c No, User Id, Password, Card No,etc</li>
+        <li>Fraudulent e-mails contain links of look-alike websites to mislead into entering sensitive financial data</li>
+        <li>Bank will never send such communications to customers asking for their personal or confidential information</li>
+        <li>Always visit Bank's site instead of clicking on the links provided in emails or third party websites</li>
+        <li>Do not respond to pop-up windows asking for your confidential information</li>
+    </ul>
+  </div>
+  

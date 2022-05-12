@@ -1,0 +1,38 @@
+/* .form-label{
+    font-weight: 300;
+    color: black;
+} */
+
+.nav_links{
+    display: flex;  
+    /* justify-content: space-between; */
+    background:#074c85;
+    margin: 0px;
+}
+
+.nav_links li{
+    list-style: none;
+    padding: 20px;
+    color: white;
+    /* margin-right: 0px 50px; */
+ }
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+} 
+.form-label{
+    font-size: 20px;
+}
+button{
+    background-color: #1b3bf0; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin:4px 4px;
+    cursor: pointer;
+}

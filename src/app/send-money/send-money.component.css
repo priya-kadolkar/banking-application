@@ -1,0 +1,48 @@
+.nav_links{
+    display: flex;  
+    /* justify-content: space-between; */
+    background:#074c85;
+    margin: 0px;
+}
+
+.nav_links li{
+    list-style: none;
+    padding: 20px;
+    color: white;
+    /* margin-right: 0px 50px; */
+ }
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.card{
+    margin-top: 40px;
+    border:none;
+    width: 700px;
+    padding: 60px;
+    position: absolute;
+    /* top: 5%; */
+     left: 37%;
+    /* transform: translate(50%,50%); */
+    background:rgb(247, 97, 92);
+    background: linear-gradient(90deg, rgb(207, 125, 110) 0%, rgb(223, 120, 106)100%);
+}
+.card h1, h6,h5{
+    color: #fff;
+}
+
+.form-label{ 
+    color: #fff;
+}
+
+.btn{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 200px;
+    cursor: pointer;
+    color: #fff;
+}

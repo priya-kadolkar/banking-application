@@ -1,0 +1,50 @@
+.nav_links{
+    display: flex;  
+    /* justify-content: space-between; */
+    background:#074c85;
+    margin: 0px;
+}
+
+.nav_links li{
+    list-style: none;
+    padding: 20px;
+    color: white;
+    /* margin-right: 0px 50px; */
+ }
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+} 
+.card{
+    margin-top: 40px;
+    border:none;
+    width: 500px;
+    padding: 30px;
+    position: absolute;
+    /* top: 5%; */
+    /* left: 50%; */
+    /* transform: translate(50%,50%); */
+    background:rgb(161, 68, 25);
+    background: linear-gradient(90deg, rgb(85, 5, 16) 0%, rgb(187, 94, 18)100%);
+}
+
+
+
+.card h1, h6{
+    color: #fff;
+}
+
+.form-label{ 
+    color: #fff;
+}
+
+/* .img-fluid{
+   width: 500px;
+    margin-left: 200%;
+    right: 50%;
+    transform: translate(40%,40%);  
+    position: absolute;
+    height: 300px;
+
+} */

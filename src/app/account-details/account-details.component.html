@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="main">
+    <ul class="nav_links">
+      <li style="font-size: 20px">
+        <h1 style="margin: 0px; padding: 0px">Banking Application</h1>
+      </li>
+      <li style="margin-left: 600px">
+        <button routerLink="/home">Home</button>
+      </li>
+      <li>
+        <button routerLink="/login">Logout</button>
+      </li>
+    </ul>
+  </div>
+  <form action="">
+    <h1 style="color: rgb(221, 12, 12); font-weight: 500; margin-top: 50px">{{ accountDetails?.accountType | uppercase}} ACCOUNT</h1>
+   
+    <table class="table">
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Account Number</th>
+        <th>Account Type</th>
+        <th>Account Balance</th>
+        <th>Created Date</th>
+      </thead>
+      <tbody>
+        <td>{{ accountDetails?.firstName }}</td>
+        <td>{{ accountDetails?.lastName }}</td>
+        <td>{{ accountDetails?.accountNumber }}</td>
+        <td>{{ accountDetails?.accountType }}</td>
+        <td>{{ accountDetails?.balance }}</td>
+        <td>{{ accountDetails?.createdDate }}</td>
+      </tbody>
+    </table>
+    <br />
+
+    <button type="button" class="btn btn-success" (click)="callSendMoney()" style="margin-bottom:20px;">
+      SEND MONEY
+    </button>
+  </form>
+</div>

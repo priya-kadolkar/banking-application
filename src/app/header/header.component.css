@@ -1,0 +1,23 @@
+ .nav_links{
+     margin-top: 0px;
+    display: flex;  
+    justify-content: space-evenly;
+    background:#074c85;
+    margin: 0px;
+}
+
+.nav_links li{
+    list-style: none;
+    padding: 20px;
+    color: white;
+    /* margin-right: 0px 50px; */
+ }
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+} 
+h1{
+    color: #fff;
+}
+

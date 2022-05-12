@@ -1,0 +1,299 @@
+<section class="vh-100" style="background-color: #eee">
+  <div class="container">
+    <div class="main">
+      <ul class="nav_links">
+        <li style="font-size: 20px">
+          <h1 style="margin: 0px; padding: 0px">Banking Application</h1>
+        </li>
+        <!-- <b><li><a routerLink="/">Home</a></li></b> -->
+        <li style="margin-left: 600px"><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/signup">SignUp</a></li>
+      </ul>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12">
+        <div class="card text-black">
+          <div class="card-body p-md-8">
+            <div class="row">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                  Sign up
+                </p>
+
+                <form class="mx-1 mx-md-4" [formGroup]="registrationForm">
+                  <div class="form-group">
+                    <div class="d-flex flex-row">
+                      <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
+                      <div class="form-outline mb-3">
+                        <b
+                          ><label class="form-label" for="firstName"
+                            >First name</label
+                          ></b
+                        >
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          class="form-control"
+                          formControlName="firstName"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="
+                        registrationForm.controls['firstName'].touched &&
+                        registrationForm.controls['firstName'].hasError(
+                          'required'
+                        )
+                      "
+                    >
+                      <p style="color: red; margin-left: 20px">
+                        First name is required
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
+                      <div class="form-outline mb-3">
+                        <b>
+                          <label class="form-label" for="lastName"
+                            >Last name</label
+                          ></b
+                        >
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          class="form-control"
+                          formControlName="lastName"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="
+                        registrationForm.controls['lastName'].touched &&
+                        registrationForm.controls['lastName'].hasError(
+                          'required'
+                        )
+                      "
+                    >
+                      <p style="color: red; margin-left: 20px">
+                        Last name is required
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <!-- <i class="fas fa-envelope fa-lg me-3 fa-fw"></i> -->
+                      <div class="form-outline mb-3">
+                        <b>
+                          <label class="form-label" for="mobileNumber"
+                            >Mobile number</label
+                          ></b
+                        >
+                        <input
+                          type="text"
+                          id="mobileNumber"
+                          name="mobileNumber"
+                          class="form-control"
+                          formControlName="mobileNumber"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="
+                        registrationForm.controls['mobileNumber'].touched &&
+                        registrationForm.controls['mobileNumber'].hasError(
+                          'required'
+                        )
+                      "
+                    >
+                      <p style="color: red; margin-left: 20px">
+                        Mobile number is required
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <!-- <i class="fas fa-envelope fa-lg me-3 fa-fw"></i> -->
+                      <div class="form-outline mb-3">
+                        <b
+                          ><label class="form-label" for="email"
+                            >Email</label
+                          ></b
+                        >
+                        <input
+                          type="email"
+                          id="emailId"
+                          name="emailId"
+                          class="form-control"
+                          formControlName="emailId"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="
+                        registrationForm.controls['emailId'].touched &&
+                        registrationForm.controls['emailId'].hasError(
+                          'required'
+                        )
+                      "
+                    >
+                      <p style="color: red; margin-left: 20px">
+                        Email is required
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <!-- <i class="fas fa-envelope fa-lg me-3 fa-fw"></i> -->
+                      <div class="form-outline mb-3">
+                        <b>
+                          <label class="form-label" for="dob"
+                            >Date of birth</label
+                          ></b
+                        >
+                        <input
+                          type="date"
+                          id="dateOfBirth"
+                          name="dateOfBirth"
+                          class="form-control"
+                          formControlName="dateOfBirth"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="
+                        registrationForm.controls['dateOfBirth'].touched &&
+                        registrationForm.controls['dateOfBirth'].hasError(
+                          'required'
+                        )
+                      "
+                    >
+                      <p style="color: red; margin-left: 20px">
+                        Date of birth is required
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline mb-3">
+                        <b
+                          ><label class="form-label" for="address"
+                            >Address</label
+                          ></b
+                        >
+                        <br />
+                        <textarea
+                          name="address"
+                          id="address"
+                          class="form-control"
+                          formControlName="address"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="
+                        registrationForm.controls['address'].touched &&
+                        registrationForm.controls['address'].hasError(
+                          'required'
+                        )
+                      "
+                    >
+                      <p style="color: red; margin-left: 20px">
+                        Address is required
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline mb-3">
+                        <b
+                          ><label class="form-label" for="password"
+                            >Password</label
+                          ></b
+                        >
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          class="form-control"
+                          formControlName="password"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-flex flex-row align-items-center mb-8">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline mb-3">
+                        <b
+                          ><label class="form-label" for="confirmPassword"
+                            >Confirm Password</label
+                          ></b
+                        >
+                        <input
+                          type="password"
+                          id="confirmPassword"
+                          name="confirmPassword"
+                          class="form-control"
+                          formControlName="confirmPassword"
+                        />
+                      </div>
+                    </div>
+                    <div *ngIf="registrationForm.errors">
+                      <div *ngIf="registrationForm.errors['doNotMatch']">
+                        <p style="color: red; margin-left: 20px">
+                          Passwords do not match
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex mx-4 mb-3 mb-lg-4">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn"
+                      (click)="onRegister()"
+                      [disabled]="registrationForm.invalid"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+                <a
+                  style="
+                    color: rgb(0, 2, 90);
+                    margin-top: 10px;
+                    margin-left: 20px;
+                  "
+                  routerLink="/login"
+                  >Already registered? Click to Login</a
+                >
+              </div>
+              <div
+                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="../../assets/registration.webp"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
